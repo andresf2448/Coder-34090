@@ -44,7 +44,7 @@ console.log("proceso finalizado"); */
   console.log(i);
 } */
 
-for (let i = 1; i <= 10; i++) {
+/* for (let i = 1; i <= 10; i++) {
   let covid = prompt("tiene covid? ingrese no o si").toLowerCase();
 
   if (covid === "si") {
@@ -53,4 +53,106 @@ for (let i = 1; i <= 10; i++) {
   } else {
     alert("usted no puede recibir el medicamento" + i);
   }
+} */
+
+//WHILE
+/* 
+estructura del while
+while(condicion){
+  codigo a repetir siempre y cuando la condicion sea verdadera
+}
+*/
+/* 
+CUIDADO BLUCLE INFINITO
+let repetir = true;
+
+while(repetir){
+  console.log("hola");
+} */
+
+/* let usuario = prompt("Ingrese el usuario");
+
+while(usuario != "andres"){
+  alert("Usuario incorrecto");
+  usuario = prompt("Ingrese el usuario");
+}
+
+alert("Bienvenido"); */
+
+/* let entrada = prompt("Ingresar un dato");
+
+while (entrada != "ESC") {
+  alert("El usuario ingresó " + entrada);
+  entrada = prompt("Ingresar otro dato");
+} */
+
+//DO WHILE
+/* 
+estructura del do while
+
+do{
+  codigo a ejecutar por primera vez y continua si la condicion es verdadera
+}while(condicion);
+*/
+
+let valor = true;
+
+/* while(valor){
+  console.log("hola");
+} */
+
+/* do{
+  console.log("hola");
+}while(valor); */
+
+//SWITCH
+/* 
+estructura del switch
+
+switch(valor){
+  case valor1:
+    codigo a ejecutar para el caso en que valor es valor1
+    break;
+  
+  case valor2:
+    codigo a ejecutar para el caso en que valor es valor2
+    break;
+
+  default:
+    codigo a ejecutar cuando el valor no coincide con ninguno de los valores anteriores
+    break;
+}
+*/
+
+/* let moneda = "cop";
+
+switch (moneda) {
+  case "ars":
+    console.log("moneda de argentina");
+    break;
+
+  case "cop":
+    console.log("moneda de colombia");
+    break;
+
+  default:
+    console.log("no se reconoce el país de la moneda");
+    break;
+} */
+
+let entrada = prompt("Ingresar un nombre");
+
+while(entrada != "ESC" ){
+   switch (entrada) {
+       case "ANA":
+            alert("HOLA ANA");
+            break;
+        case "JUAN":
+            alert("HOLA JUAN");
+            break;
+       default:
+           alert("¿QUIÉN SOS?")
+           break;
+   }
+   entrada = prompt("Ingresar un nombre");
 }
