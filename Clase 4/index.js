@@ -125,3 +125,81 @@ alert(resultado);
 }
 
 console.log(sumar(2,3)); */
+
+/* {
+  let resultado = 0;
+}
+
+console.log(resultado); */
+
+/* function sumar(numero1, numero2) {
+  let resultado = numero1 + numero2;
+  return resultado;
+}
+
+sumar(5, 6);
+
+console.log(resultado); */
+/* 
+{
+  let nombre = "andres";
+}
+console.log(nombre); */
+
+/* function sumar(x, y){
+  let resultado = x + y;
+  return resultado;
+}
+
+function restar(x, y){
+  let resultado = x - y;
+  return resultado;
+} */
+
+/* let suma = function (a, b) {
+  return a + b;
+};
+
+console.log(suma(3, 4)); */
+
+//funcion flecha o arrow function
+
+/* console.log(suma(5, 6)); */
+
+// let suma = (a, b) => {return a + b};
+/* function suma(x,y){
+  return x + y;
+}
+
+let suma = (a, b) => a + b; */
+function calculadora(numero1, numero2, operacion){
+
+}
+
+let calculadora = (numero1, numero2, operacion) => {
+
+}
+
+let calculadora = (numero1, numero2, operacion) => {
+  switch (operacion) {
+    case "+":
+      return numero1 + numero2;
+      break;
+
+    case "-":
+      return numero1 - numero2;
+      break;
+
+    case "*":
+      return numero1 * numero2;
+      break;
+
+    case "/":
+      return numero1 / numero2;
+      break;
+
+    default:
+      return "Operacion no valida";
+      break;
+  }
+}
