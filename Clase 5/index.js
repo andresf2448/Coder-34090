@@ -69,18 +69,83 @@ console.log(persona2.nombre); */
 
 // alert(mensaje);
 
-function Producto(info){
-  this.nombre = info.nombre;
-  this.precio = info.precio;
-  this.imagen = info.imagen;
-  this.color = info.color;
-  this.peso = info.peso;
+// function Producto(info){
+//   this.nombre = info.nombre;
+//   this.precio = info.precio;
+//   this.imagen = info.imagen;
+//   this.color = info.color;
+//   this.peso = info.peso;
+// }
+
+// let producto = new Producto({
+//   peso: 234,
+//   nombre: "monitor",
+//   imagen: "asdf",
+//   color: "azul",
+//   precio: 123,
+// });
+
+// let persona1 = {
+//   nombre: "Pepito",
+//   edad: 34,
+//   direccion: "Av",
+// };
+
+// for(const clave in persona1){
+//   console.log("clave", clave);
+//   console.log("valor", persona1[clave]);
+// }
+/* 
+function Producto(nombre, precio, imagen) {
+  this.nombre = nombre;
+  this.precio = precio;
+  this.imagen = imagen;
+}
+ */
+
+/* class Producto {
+  constructor(nombre, precio, imagen) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.imagen = imagen;
+  }
 }
 
-let producto = new Producto({
-  peso: 234,
-  nombre: "monitor",
-  imagen: "asdf",
-  color: "azul",
-  precio: 123,
-});
+let producto1 = new Producto("Monitor gamer ...", 529900, "asdfasdf");
+console.log(producto1); */
+
+// class Persona{
+//   constructor(nombre, edad, direccion){
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.direccion = direccion;
+//   }
+
+//   hablar(){
+//     console.log(`Hola soy ${this.nombre}`);
+//   }
+// }
+
+// let persona = new Persona("andres", 90, "AV");
+// let persona1 = new Persona("mariano", 90, "AV");
+// persona.hablar();
+// persona1.hablar();
+
+class Producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.vendido = false;
+  }
+
+  vender(){
+    this.vendido = true;
+  }
+}
+
+
+let producto1 = new Producto("Monitor gamer ...", 529900);
+console.log(producto1);
+
+producto1.vender();
+console.log(producto1);
