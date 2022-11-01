@@ -110,17 +110,21 @@ const productos = [
   { id: 4, nombre: "zapato", precio: 1750 },
 ];
 
-let encontrado = false;
-let nombre = prompt("Ingrese el nombre del producto");
-
-for(const producto of productos){
-  if(producto.nombre === nombre){
-    encontrado = true;
+const encontrar = (nombre) => {
+  let encontrado = false;
+  
+  for(const producto of productos){
+    if(producto.nombre === nombre){
+      encontrado = true;
+    }
   }
-}
+  
+  if(encontrado){
+    alert("Producto disponible");
+  }else{
+    alert("Producto no disponible");
+  }
+};
 
-if(encontrado){
-  alert("Producto disponible");
-}else{
-  alert("Producto no disponible");
-}
+let nombre = prompt("Ingrese el nombre del producto").toLowerCase();
+encontrar(nombre);
