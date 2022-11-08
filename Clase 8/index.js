@@ -106,6 +106,5 @@ filtrados.forEach(producto => {
     <p>Nombre: ${producto.nombre}</p>
     <b>$${producto.precio}</b>
   `;
-  item.className = "asldkjfgasdf";
   contenedor.append(item);
 });
