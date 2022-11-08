@@ -67,6 +67,26 @@ if(lugar === "carrito"){
 //   contenedor.append(li);
 // });
 
+// const productos = [
+//   { id: 1, nombre: "camisa", precio: 1000 },
+//   { id: 2, nombre: "pantalon", precio: 700 },
+//   { id: 3, nombre: "zapato", precio: 1350 },
+//   { id: 4, nombre: "gorra", precio: 300 },
+//   { id: 4, nombre: "gorra", precio: 300 },
+// ];
+// let contenedor = document.getElementById("contenedor");
+
+// productos.forEach(producto => {
+//   let item = document.createElement("div");
+//   item.innerHTML = `
+//     <h2>ID: ${producto.id}</h2>
+//     <p>Nombre: ${producto.nombre}</p>
+//     <b>$${producto.precio}</b>
+//   `;
+//   item.className = "asldkjfgasdf";
+//   contenedor.append(item);
+// });
+
 const productos = [
   { id: 1, nombre: "camisa", precio: 1000 },
   { id: 2, nombre: "pantalon", precio: 700 },
@@ -76,7 +96,10 @@ const productos = [
 ];
 let contenedor = document.getElementById("contenedor");
 
-productos.forEach(producto => {
+let precio = parseInt(prompt("Ingrese el precio mínimo"));
+let filtrados = productos.filter(item => item.precio >= precio);
+
+filtrados.forEach(producto => {
   let item = document.createElement("div");
   item.innerHTML = `
     <h2>ID: ${producto.id}</h2>
