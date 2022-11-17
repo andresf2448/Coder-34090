@@ -111,3 +111,43 @@ persona1.hablar(); */
 //   console.log(inputs[0].value);
 //   console.log(inputs[1].value);
 // });
+
+//productos a renderizar
+let productos = [
+  { id: 1, nombre: "Arroz", precio: 125 },
+  { id: 2, nombre: "Fideo", precio: 70 },
+  { id: 3, nombre: "Pan", precio: 50 },
+  { id: 4, nombre: "Flan", precio: 100 },
+];
+
+const agregar = (id) => {
+  let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+  let objeto = productos.find(item => item.id === id);
+
+  if(carritoStorage){
+    let nuevoCarrito = carritoStorage;
+    nuevoCarrito.push(objeto);
+    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+  }else{
+    let carrito = [objeto];
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+}
+
+//recorremos los productos para mostrarlos en la página
+productos.forEach((item) => {
+  //creamos el contenedor de cada item de los productos
+  let div = document.createElement("div");
+  div.innerHTML = `
+      <h2>ID: ${item.id}</h2>
+      <p>Nombre: ${item.nombre}</p>
+      <b>$${item.precio}</b>
+      <button id="boton${item.id}">Agregar</button>
+    `;
+
+  document.body.append(div);
+
+  let boton = document.getElementById(`boton${item.id}`);
+  boton.addEventListener("click", () => agregar(item.id));
+});
