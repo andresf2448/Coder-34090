@@ -88,11 +88,11 @@ persona1.hablar(); */
 
 //map
 // let preciosActualizados = productos.map(item => {
-  // return {
-    // id: item.id,
-    // nombre: item.nombre,
-    // precio: item.precio - 300
-  // }
+// return {
+// id: item.id,
+// nombre: item.nombre,
+// precio: item.precio - 300
+// }
 // });
 
 // console.log(preciosActualizados);
@@ -122,18 +122,18 @@ let productos = [
 
 const agregar = (id) => {
   let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
-  let objeto = productos.find(item => item.id === id);
-
-  if(carritoStorage){
+  let objeto = productos.find((item) => item.id === id);
+  //validamos si existen productos en el carrito
+  if (carritoStorage) {
     let nuevoCarrito = carritoStorage;
     nuevoCarrito.push(objeto);
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-  }else{
+  } else {
     let carrito = [objeto];
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
-}
+};
 
 //recorremos los productos para mostrarlos en la página
 productos.forEach((item) => {
@@ -148,6 +148,7 @@ productos.forEach((item) => {
 
   document.body.append(div);
 
+  //traemos el boton
   let boton = document.getElementById(`boton${item.id}`);
   boton.addEventListener("click", () => agregar(item.id));
 });
