@@ -8,7 +8,7 @@
 estructura del operador ternario
 condicion ? codigo en caso de que condicion verdadera : codigo en caso de que condicion falsa
 */
-let edad = 17;
+// let edad = 17;
 
 // if(edad >= 18){
 //   console.log("puede entrar");
@@ -112,10 +112,95 @@ si el operador1 es true entonces retorna operador1 en caso contrario retorna ope
 // console.log( false ?? "Nullish")  // false
 
 // const usuario = null;
+// const usuario = {
+//   nombre: "pepito",
+//   edad: 10,
+//   familiares: null
+// };
+
+// console.log(usuario?.familiares?.hermano || "la propiedad no existe");
+
 const usuario = {
   nombre: "pepito",
   edad: 10,
-  familiares: null
+  direccion: "AV",
+  telefono: {
+    casa: 1234,
+    trabajo: 12341234,
+  },
+};
+// const nombre = usuario.nombre;
+// const edad = usuario.edad;
+// const direccion = usuario.direccion;
+
+/* let {
+  nombre: namePerson,
+  edad,
+  direccion,
+  telefono: { casa },
+} = usuario;
+console.log(namePerson, edad, direccion, casa); */
+
+// const valores = ({precio, nombre}) => {
+//   console.log(precio, nombre);
+// };
+
+// let objeto = { precio: 123, nombre: "camisa" };
+// valores(objeto);
+
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
+// const [a, , b] = nombres;
+
+// console.log(a);
+// console.log(b);
+
+// let numero1 = 5;
+// let numero2 = numero1;
+
+// numero2 = 7;
+
+// console.log(numero1);
+
+/* let persona1 = {nombre: "camila", edad: 50};
+let persona2 = {...persona1};
+
+persona2.nombre = "andres";
+console.log(persona1);
+console.log(persona1.nombre);
+console.log(persona1.edad);
+
+console.log(persona2); */
+
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
+// console.log(...nombres);
+// console.log(nombres.join(" "));
+
+// const numeros = [4, 77, 92, 10, 3, -32, 54, 11];
+
+// console.log(Math.max(...numeros));
+
+// let persona1 = {nombre: "camila", edad: 50};
+// let persona2 = {
+//   ...persona1,
+//   direccion: "AV",
+//   edad: 60
+// }
+
+// console.log(persona2);
+
+/* const numeros = (...numeros) => {
+  console.log(numeros);
 };
 
-console.log(usuario?.familiares?.hermano || "la propiedad no existe");
+numeros(1, 4, 6, 8, 8, 9, 9, 7, 65, 4, 6, "juan"); */
+
+// let datos = [
+//   [1, [4, 5, 6, 8, 9], 6],
+//   [3, 4, 7],
+//   [4, 5, 6],
+// ];
+
+// let [a, b] = datos;
+
+// console.log(a);
+// console.log(b);
